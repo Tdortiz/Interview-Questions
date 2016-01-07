@@ -1,13 +1,21 @@
-
+/**
+ * This class prints all variations of password of a defined length. 
+ * @author Thomas Ortiz
+ */
 public class Password {
 
 	public static void main(String[] args) 
 	{
 		//generatePasses(1);
-		daniel(6);
+		altGeneratePasses(6);
 
 	}
 	
+	/**
+	 * First generate passes option that takes in a length generates a password 
+	 * by use recursion.
+	 * @param length of password
+	 */
 	public static void generatePasses(int length)
 	{
 		char[] s = new char[length];
@@ -21,6 +29,13 @@ public class Password {
 		
 	}
 	
+	/**
+	 * The recursive call for generatePasses.
+	 * 
+	 * @param arr char array to add to
+	 * @param i 
+	 * @param length of password
+	 */
 	public static void recursiveCall(char[] arr, int i, int length)
 	{
 		if(i == length){
@@ -36,6 +51,11 @@ public class Password {
 		}
 	}
 
+	/**
+	 * Tostring method for arrays
+	 * 
+	 * @param arr to print
+	 */
 	public static String arrToString(char[] arr){
 		String s = "";
 		
@@ -44,8 +64,13 @@ public class Password {
 		}
 		return s;
 	}
-
-	public static void daniel(int length){
+	
+	/**
+	 * Interative approach to print all password of specified length
+	 * 
+	 * @param length of password
+	 */
+	public static void altGeneratePasses(int length){
 		String s = "";
 		// Fills a string with 0s to pad the final string
 		for(int i = 0; i < length; i++){
