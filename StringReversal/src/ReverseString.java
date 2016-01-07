@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * ReverseString handles different ways at reversing a string.
  * @author Thomas Ortiz
@@ -9,9 +11,19 @@ public class ReverseString {
 	 * @param args command line arguments
 	 */
 	public static void main(String[] args) {
-		//System.out.println("Expected: " + reverse("abcd"));
-		//otherReverse("abcd");
-		otherReverse("Zach Sharp");
+		System.out.println("Input words you want to see reversed. If you want to exit type -1.");
+		Scanner input = new Scanner(System.in);
+		while(input.hasNextLine()){
+			String text = input.nextLine();
+			
+			if(text.equals("-1")){
+				System.out.println("We are exiting the program");
+				System.exit(0);
+			}
+			
+			otherReverse(text);
+		}
+		input.close();
 		
 	}
 	
@@ -50,6 +62,7 @@ public class ReverseString {
 			ss[i] = ss[j];
 			ss[j] = temp;
 			j--;
+			System.out.print("    ");
 			System.out.println(arrayToString(ss));
 		}
 	}
