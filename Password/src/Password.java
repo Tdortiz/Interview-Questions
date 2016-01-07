@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * This class prints all variations of password of a defined length. 
  * @author Thomas Ortiz
@@ -6,8 +8,22 @@ public class Password {
 
 	public static void main(String[] args) 
 	{
+		System.out.println("Input the length of the passwords you wish to generate, enter any negative number to exit.");
+		Scanner input = new Scanner(System.in);
+		while(input.hasNextInt()){
+			int length = input.nextInt();
+			
+			if(length < 0){
+				System.out.println("We are exiting the program");
+				System.exit(0);
+			}
+			
+			altGeneratePasses(length);
+		}
+		input.close();
+		
 		//generatePasses(1);
-		altGeneratePasses(6);
+		
 
 	}
 	
@@ -52,7 +68,7 @@ public class Password {
 	}
 
 	/**
-	 * Tostring method for arrays
+	 * ToString method for arrays
 	 * 
 	 * @param arr to print
 	 */
