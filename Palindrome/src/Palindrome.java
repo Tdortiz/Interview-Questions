@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 /**
  * This class checks if a string is a palindrome or not.
  * @author Thomas Ortiz
@@ -8,8 +10,24 @@ public class Palindrome {
 	 * @param args command line arguments
 	 */
 	public static void main(String[] args){
-		System.out.println(isPalindrome("racecar"));
-		System.out.println(isPalindrome("car"));
+		System.out.println("Input words you want to test if they are palindromes. If you want to exit type -1.");
+		Scanner input = new Scanner(System.in);
+		
+		while(input.hasNextLine()){
+			String text = input.nextLine();
+			
+			if(text.equals("-1")){
+				System.out.println("We are exiting the program");
+				System.exit(0);
+			}
+			
+			if(isPalindrome(text)){
+				System.out.println(text + " is a palindrome!");
+			} else {
+				System.out.println(text + " is NOT a palindrome!");
+			}
+		}
+		input.close();
 	}
 	
 	/**
