@@ -1,8 +1,21 @@
+/**
+ @file prime.c
+ Calculates all prime numbers between 1 and user 
+ input command line argument.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
 
+/**
+ Calculates which numbers are prime between 1 and max.
+ Saves prime numbers into the prime array.
+ 
+ @param max number to calculate to
+ @param count amount of prime numbers in the primes array
+ */
 int* calculatePrime(int max, int* count){
     
     int* primes = malloc(sizeof(int) * (max) );
@@ -40,6 +53,12 @@ int* calculatePrime(int max, int* count){
     return primes;
 }
 
+/**
+ Initiates the program.
+ 
+ @param argc amount of args
+ @param argv array of args
+ */
 int main( int argc, char *argv[] ) {
     int max;
     int* count = malloc(sizeof(int));
