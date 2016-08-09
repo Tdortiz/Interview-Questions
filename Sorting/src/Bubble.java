@@ -4,6 +4,9 @@ public class Bubble {
 	public static void main(String[] args){
 		int[] arr = setup();
 		sort(arr);
+		System.out.println("---------------------------");
+		int[] arr2 = setup2();
+		sort(arr2);
 	}
 	
 	public static void sort(int[] arr){
@@ -46,5 +49,17 @@ public class Bubble {
 		arr[5] = 1;
 		return arr;
 	}
+	
+	public static int[] setup2(){
+		int[] arr = new int[5];
+		arr[0] = 5;
+		arr[1] = 1;
+		arr[2] = 7;
+		arr[3] = 3;
+		arr[4] = 9;
+		return arr;
+	}
+	
+	
 	
 }
