@@ -5,6 +5,11 @@ public class Merge {
 		
 	}
 	
+	public int[] sort(int[] arr){
+		
+		return null;
+	}
+	
 	public static int[] setup(){
 		int[] arr = new int[6];
 		arr[0] = 5;
