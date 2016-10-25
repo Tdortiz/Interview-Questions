@@ -1,3 +1,4 @@
+package password;
 import java.util.Scanner;
 
 /**
